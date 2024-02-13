@@ -1,38 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  filter: grayscale(30%);
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 5em;
 }
 
-.App-link {
-  color: #61dafb;
+body {
+  background: linear-gradient(90deg, rgba(207, 206, 228, 1) 0%, rgba(164, 164, 198, 1) 49%, rgba(177, 223, 232, 1) 100%);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.newTodoText {
+  margin: 0;
+  align-self: flex-start;
+  font-weight: 600;
+  font-size: 1.3em;
+  position: relative;
+  left: 1em;
+}
+
+.newTodoContainer {
+  border-radius: 0.75em;
+  height: 6em;
+  width: 28em;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.newTodoContainer input[type="text"] {
+  position: relative;
+  right: 6em;
+  top: 0.5em;
+  height: 40%;
+  inline-size: 50%;
+  border: none;
+  border-radius: 0.75em;
+  background-color: #f0dddd;
+  text-align: center;
+  font-size: 1em;
+}
+
+.newTodoContainer input[type="text"]:focus {
+  outline: none;
+}
+
+.addTaskBtn,
+.deleteBtn {
+  height: 3em;
+  border: none;
+  border-radius: 0.75em;
+  font-size: small;
+  font-weight: bolder;
+  color: #fff;
+  background-color: rgb(46, 43, 43);
+  transition: background-color 1s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.addTaskBtn {
+  position: relative;
+  top: 0.75em;
+  right: 2em;
+  width: 20%;
+}
+
+.addTaskBtn:hover,
+.deleteBtn:hover {
+  background-color: #7a7979;
+  color: #000;
+}
+
+.todoListContainer {
+  position: absolute;
+  margin: 10em 18em 0 0;
+}
+
+.todoListContainer li, 
+.todoListContainer button {
+  position: relative;
+  top: 20px;
+  margin-top: 1em;
+  list-style-type: none;
+  margin-left: 1em;
+}
+
+.deleteBtn {
+  width: 7.1em;
+  position: relative;
+  left: 20.5em;
 }
